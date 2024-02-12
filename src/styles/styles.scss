@@ -1,0 +1,21 @@
+// dashboard - tree expand-collapse fix
+.tree {
+  summary {
+    div.tree-expand {
+      display: block;
+    }
+
+    div.tree-collapse {
+      display: none;
+    }
+  }
+
+  details[open] > summary {
+    div.tree-expand {
+      display: none;
+    }
+    div.tree-collapse {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+---
+interface Props {
+  name: string;
+  position: string;
+  url:string
+  summary: string
+  startDate:string
+  endDate:string
+  technologies:string
+  remote:boolean
+}
+
+const { name, position, url, summary, startDate, endDate, technologies, remote} = Astro.props;
+---
+
+<article>
+    <header class="flex justify-between w-full">
+        <section class=" inline-flex align-baseline gap-2">
+            <a href={url} target="_blank" class="text-md font-medium hover:underline">{name}</a>
+            {remote && 
+                <div class="flex pt-1 px-1 items-center bg-gray-100 font-bold font-mono text-xs">Remoto</div>
+            }
+        </section>
+        <section class="text-gray-400">{startDate} - {endDate}</section>
+    </header>
+
+    <main class="flex flex-col mt-1 gap-1">
+        <h2 class="font-prime text-sm">{position}</h2>
+        <p class="font-prime text-xs text-gray-500">{summary}</p>
+        {technologies && <p class="font-prime text-xs text-gray-500">Tecnologías: {technologies}</p>}
+    </main>
+</article>

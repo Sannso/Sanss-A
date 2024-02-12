@@ -1,0 +1,27 @@
+---
+import { work } from "@cv";
+import WorkCard from "@/components/cv/WorkCard.astro";
+---
+
+<section class="flex flex-col mt-10 gap-4">
+  <h1 class="text-xl font-bold">Experiencia</h1>
+  <article class="flex flex-col gap-3">
+    {
+      work &&
+        work.map((value) => {
+          return (
+            <WorkCard
+              name={value.name}
+              position={value.position}
+              url={value.url}
+              summary={value.summary}
+              startDate={value.startDate}
+              endDate={value.endDate}
+              technologies={value.technologies}
+              remote={value.remote}
+            />
+          );
+        })
+    }
+  </article>
+</section>

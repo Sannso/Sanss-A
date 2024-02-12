@@ -1,0 +1,76 @@
+---
+import Social from "./Social.astro";
+---
+
+<script>
+  const contenedorPadre = document.getElementById("div-main");
+  const footer = document.getElementById("footer-social");
+
+  const checkScroll = () => {
+    // Obtener las propiedades de estilo del contenedor-padre
+    const styles = window.getComputedStyle(contenedorPadre!);
+
+    // Verificar si se está haciendo scroll
+    if (styles.overflowY === "scroll" || styles.overflowY === "auto") {
+      // Aplicar clase al footer para cambiar su estilo
+      footer!.classList.add("scroll");
+
+      // Agregar un evento de scroll al contenedor-padre
+      contenedorPadre!.addEventListener("scroll", function () {
+        // Verificar si se está haciendo scroll
+        // Verificar si el scroll está en la parte inferior
+        if (
+          contenedorPadre!.scrollTop + contenedorPadre!.clientHeight ===
+          contenedorPadre!.scrollHeight
+        ) {
+          // Remover clase si el scroll está en la parte inferior
+          footer!.classList.remove("scroll");
+        } else {
+          // Remover clase si no se está haciendo scroll
+          footer!.classList.add("scroll");
+        }
+      });
+    } else {
+      // Remover clase si no se está haciendo scroll
+      footer!.classList.remove("scroll");
+    }
+  };
+
+  checkScroll();
+</script>
+
+<section
+  id="footer-social"
+  class="footer flex flex-col items-center text-[#3b4147] sticky lg:absolute pb-4 bottom-0 left-0 w-full"
+>
+  <h2 class="font-bold text-xl mb-3">Contacto</h2>
+  <article class="flex gap-4">
+    <Social />
+  </article>
+</section>
+
+<style>
+  .footer.scroll {
+    @media only screen and (max-height: 900px) and (max-width: 800px) {
+      blur-shadow:
+        0px 5px 50px -5px hsla(0, 0%, 100%, 0.1),
+        0px 0px 0 1px rgba(206, 206, 206, 0.7);
+      background: rgba(206, 206, 206, 0.7);
+    }
+
+    /* SOLO ID EN EL NOMBRE animation: blur linear both;  lineal, and do the animation in both directions 
+      animation-timeline: scroll();  do the animation with scroll 
+      animation-range: 0 100px; range to do all the animation */
+  }
+  /* 
+    @keyframes blur {
+      to {
+        blur-shadow:
+          0px 5px 50px -5px hsla(0, 0%, 100%, 0.1),
+          0px 0px 0 1px rgba(0, 0, 0, 0.3);
+
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+      }
+    } */
+</style>

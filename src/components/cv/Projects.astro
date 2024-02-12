@@ -1,0 +1,24 @@
+---
+import { projects } from "@cv";
+import ProjectCard from "@/components/cv/ProjectCard.astro";
+---
+
+<section class="flex flex-col mt-16 gap-6">
+  <h1 class="text-xl font-bold">Proyectos</h1>
+  <article class="grid grid-cols-2 gap-10">
+    {
+      projects &&
+      projects.map((project) => {
+          return (
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              url={project.url}
+              technologies={project.technologies}
+              isActive={project.isActive}
+            />
+          );
+        })
+    }
+  </article>
+</section>

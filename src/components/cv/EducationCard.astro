@@ -1,0 +1,26 @@
+---
+interface Props {
+  institution: string;
+  area: string;
+  url: string;
+  studyType: string;
+  startDate: string;
+  endDate: string;
+  courses: Array<string>;
+}
+
+const { institution, area, url, startDate, endDate } = Astro.props;
+---
+
+<article>
+  <header class="flex justify-between w-full">
+    <a href={url} target="_blank" class="text-md font-medium hover:underline"
+      >{institution}</a
+    >
+    <section class="text-gray-400">{startDate} - {endDate}</section>
+  </header>
+
+  <main class="flex flex-col mt-1 gap-1">
+    <h2 class="font-prime text-sm text-gray-500">{area}</h2>
+  </main>
+</article>

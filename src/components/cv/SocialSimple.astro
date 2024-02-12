@@ -1,0 +1,29 @@
+---
+import {
+  LinkedInIcon,
+  GitHubIcon,
+  PhoneIcon,
+  EmailIcon,
+  XIcon,
+} from "../../icons/socialIcons";
+
+interface Props {
+  social: string;
+  size: number;
+  url: string;
+}
+
+const { social, size, url } = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="flex mt-2 size-7 justify-center place-items-center rounded-md text-gray-500 hover:text-gray-900 ring-gray-300 ring-1 hover:bg-gray-100 transition-colors cursor-pointer"
+>
+  {social === "Twitter" && <XIcon size={size} />}
+  {social === "LinkedIn" && <LinkedInIcon size={size + 5} />}
+  {social === "GitHub" && <GitHubIcon size={size} />}
+  {social === "Phone" && <PhoneIcon size={size} />}
+  {social === "Email" && <EmailIcon size={size} />}
+</a>

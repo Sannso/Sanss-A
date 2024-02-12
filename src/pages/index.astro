@@ -1,0 +1,219 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ChevronsTree from "../components/ChevronsTree.astro";
+import FooterSocial from "../components/FooterSocial.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import "@/styles/styles.scss";
+---
+
+<Layout title="Sanss">
+  <Header />
+  <main
+    id="div-main"
+    class="flex flex-col justify-between lg:grid md:grid-cols-2 mx-4 lg:max-w-4xl lg:mx-auto mt-2 lg:mt-6 mb-10 h-full lg:w-full backdrop-blur-md bg-white bg-opacity-5 rounded-xl pt-6 relative overflow-auto"
+  >
+    <section class="flex flex-col pt-4 relative px-10">
+      <article class="flex flex-col items-center text-[#3b4147]">
+        <h1 class="font-bold text-4xl mb-1">Santiago Sosa</h1>
+        <p class="text-sm font-light">Ingeniero en Sistemas y Computación</p>
+        <p class="text-sm font-light">Universidad Tecnológica de Pereira</p>
+      </article>
+
+      <article class="flex flex-col mt-12 text-[#3b4147]">
+        <h2 class="font-bold text-xl">Experiencia</h2>
+      </article>
+
+      <ul
+        class="tree mt-3 rounded-lg backdrop-blur-md bg-white bg-opacity-20 max-h-72 lg:max-h-[400px] overflow-auto"
+      >
+        <li class="tree-first">
+          <details open>
+            <summary class="pt-2 hover:bg-white hover:bg-opacity-30"
+              ><strong>Pragma S.A</strong> <ChevronsTree /></summary
+            >
+            <ul>
+              <li>
+                <details>
+                  <summary class="hover:bg-white hover:bg-opacity-30"
+                    ><strong>BTG Pactual</strong> <ChevronsTree />
+                  </summary>
+                  <ul class="text-sm mb-2 text-pretty">
+                    <li>
+                      Desarrollador Front de App Movil BTG con <strong
+                        >Angular y Ionic.</strong
+                      >
+                    </li>
+                    <li class="mt-2">
+                      Desarrollador Front de Portales Web BTG con <strong
+                        >Angular y AWS.</strong
+                      >
+                    </li>
+                    <li class="mt-2">
+                      Soporte de canales BTG y Desarrollador Front <strong
+                        >AWS, Bases de datos y Angular.</strong
+                      >
+                    </li>
+                  </ul>
+                </details>
+              </li>
+
+              <li>
+                <details>
+                  <summary class="hover:bg-white hover:bg-opacity-30"
+                    ><strong>Pragma Orbita</strong> <ChevronsTree /></summary
+                  >
+                  <ul class="text-sm mb-2 text-pretty">
+                    <li>Desarrrollador Front con <strong>Angular</strong></li>
+                  </ul>
+                </details>
+              </li>
+
+              <li>
+                <details>
+                  <summary class="hover:bg-white hover:bg-opacity-30"
+                    ><strong>Pragma Bitacora</strong> <ChevronsTree /></summary
+                  >
+                  <ul class="text-sm mb-2 text-pretty">
+                    <li>Desarrrollador Front con <strong>Angular</strong></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="tree-first">
+          <details>
+            <summary class="last-summary hover:bg-white hover:bg-opacity-30"
+              ><strong>UTP</strong> <ChevronsTree /></summary>
+            <ul>
+              <li>Desarrrollador Front con <strong>Laravel</strong></li>
+              <li class="pb-2">
+                Desarrollador Back con <strong>Python</strong>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </section>
+
+    <section class="flex flex-col mt-6 lg:place-items-center px-10">
+      <h2 class="font-bold text-xl">Proyectos</h2>
+      <section
+        class="flex flex-col w-full p-1 px-10 gap-4 max-h-64 mt-2 lg:max-h-[445px] xl:max-h-[600px] overflow-auto"
+      >
+        <ProjectCard
+          gitUrl="SanssTech"
+          title="SanssTech"
+          description="Proyecto SaaS de administracion"
+          lenguage="Angular"
+        />
+        <ProjectCard
+          gitUrl="React-projects"
+          title="React Projects"
+          description="Diferentes proyectos en React, como carritos de compra, entre otros"
+          lenguage="React"
+        />
+        <ProjectCard
+          gitUrl="HPC"
+          title="High-Performance Computing"
+          description="Proyectos y ejercicios universitarios de HPC"
+          lenguage="C"
+        />
+        <ProjectCard
+          gitUrl="GameCG2"
+          title="Juego tipo zelda"
+          description="Juego usando libreria de pygames de prueba"
+          lenguage="Python"
+        />
+        <ProjectCard
+          gitUrl="Cosas-de-python"
+          title="Proyectos Python"
+          description="Usos con python, ML, IA, Patrones, Compiladores, entre otras cosas."
+          lenguage="Python"
+        />
+      </section>
+    </section>
+
+    <FooterSocial />
+  </main>
+</Layout>
+
+<style lang="scss">
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+
+    @media screen and (max-width: 1670px) {
+      background-size: auto 100vh;
+    }
+
+    @media screen and (max-width: 500px) {
+      background-position: center right;
+    }
+
+    @media screen and (min-width: 1300px) and (max-height: 800px) {
+      background-size: 100% auto;
+    }
+  }
+
+  .tree {
+    --spacing: 1.5rem;
+    --radius: 10px;
+
+    li {
+      display: block;
+      position: relative;
+      padding-left: calc(2 * var(--spacing) - var(--radius) - 2px);
+
+      &.tree-first {
+        padding-left: 0;
+      }
+    }
+
+    ul {
+      margin-left: calc(var(--radius) - var(--spacing));
+      padding-left: 0;
+    }
+
+    li::after,
+    summary::before {
+      div {
+        background-color: blue;
+      }
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      &.last-summary {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    /*covering different versions of the browser*/
+    summary::marker,
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /*these two its for safari*/
+    summary:focus {
+      outline: none;
+    }
+    summary:focus-visible {
+      outline: 1px dotted #000;
+    }
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import { skills } from "@cv";
+---
+
+<section class="flex flex-col mt-10 gap-4">
+  <h1 class="text-xl font-bold">Skills</h1>
+  <section class="flex flex-wrap gap-2">
+    {
+      skills &&
+        skills.map((skill) => {
+          return (
+            <article class="inline-flex items-center py-1 px-2 bg-gray-800 text-white rounded-md font-mono font-bold text-xs transition-colors hover:bg-gray-600">
+              {skill.technology}
+            </article>
+          );
+        })
+    }
+  </section>
+</section>

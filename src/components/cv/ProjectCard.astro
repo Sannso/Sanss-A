@@ -1,0 +1,34 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url:string
+  technologies:Array<string>
+  isActive:boolean
+}
+
+const { name, description, url, technologies, isActive} = Astro.props;
+---
+
+<article>
+    <header class="flex items-center gap-1.5 w-full">
+        <a href={url} target="_blank" class="text-md font-medium hover:underline">{name}</a>
+        {isActive && <div class=" size-1 rounded-full bg-green-400" /> }    
+    </header>
+
+    <main class="flex flex-col mt-1 gap-1">
+        <p class="font-prime text-xs text-gray-500">{description}</p>
+        {technologies && 
+        <section>
+            {
+                technologies.map((tecnology) => {
+          return (
+            <article class="inline-flex items-center py-1 px-2 bg-gray-100 rounded-md font-mono font-bold text-[10px]">
+              {tecnology}
+            </article>
+          );
+        })
+            }
+        </section>}
+    </main>
+</article>

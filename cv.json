@@ -1,0 +1,249 @@
+{
+  "basics": {
+    "name": "Santiago Sosa",
+    "label": "Ingeniero en Sistemas y Ciencias de la Computación",
+    "image": "",
+    "email": "santiago.sosa1@utp.edu.co",
+    "phone": "(57) 3046583960",
+    "phonewp": "https://wa.me/573046583960",
+    "url": "https://sanss.co",
+    "summary": "Ingeniero en Sistemas de la UTP, especializado en desarrollo Frontend (Angular, Ionic, React y Astro), y enfocado en ampliar mis áreas de conocimiento, con experiencia también en desarrollo Móvil, Backend, Bases de Datos, AWS y Data Science.",
+    "location": {
+      "address": "Dosquebradas / Urbanizacion Aguazul",
+      "postalCode": "661002",
+      "city": "Pereira",
+      "countryCode": "COL",
+      "region": "Risaralda",
+      "timeZone": "COT"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "Sannso",
+        "url": "https://github.com/Sannso"
+      },
+      {
+        "network": "Twitter",
+        "username": "@Sansso_",
+        "url": "https://twitter.com/Sansso_"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "none",
+        "url": "https://www.linkedin.com/in/sannso"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Pragma S.A",
+      "position": "Desarrollador Frontend",
+      "url": "https://www.pragma.co/es/",
+      "startDate": "2022",
+      "endDate": "2023",
+      "summary": "Durante este año de experiencia, me enfoqué en frontend junto a equipos muy competitivos, trabajando para Bancos como en BTG Pactual y proyectos internos de la empresa, también estuve poco más de 1 mes en soporte, manejando bases de datos y varios servicios de AWS.",
+      "technologies": "Angular, Ionic, AWS, Azure",
+      "remote": true,
+      "highlights": []
+    },
+    {
+      "name": "UTP - Aura",
+      "position": "Desarrollador Full Stack",
+      "url": "https://monitores-crie.utp.edu.co/",
+      "startDate": "2021",
+      "endDate": "2022",
+      "summary": "Trabajé en las páginas de monitores y de la aplicación 'Aura' de la universidad hechas en php-laravel y también en módulos de comunicación que estaban en python.",
+      "technologies": "Python, Laravel",
+      "remote": false,
+      "highlights": []
+    },
+    {
+      "name": "UTP - Crie",
+      "position": "Monitor",
+      "url": "https://monitores-crie.utp.edu.co/",
+      "startDate": "2020",
+      "endDate": "2023",
+      "summary": "Hice servicio de atención de estudiantes y profesores en salas de , lo que me ayudo mejorar el trato con otras personas de una forma más profesional.",
+      "technologies": "",
+      "remote": false,
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Tecnológica de Pereira",
+      "url": "https://www.utp.edu.co",
+      "area": "Ingenieria en Sistemas y Ciencias de la Computación",
+      "studyType": "Bachelor",
+      "startDate": "2017",
+      "endDate": "2024",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "level": "Master",
+      "technology": "Python"
+    },
+    {
+      "level": "Master",
+      "technology": "C#"
+    },
+    {
+      "level": "Master",
+      "technology": "JavaScript"
+    },
+    {
+      "level": "Master",
+      "technology": "TypeScript"
+    },
+    {
+      "level": "Master",
+      "technology": "Angular/Ionic"
+    },
+    {
+      "level": "Master",
+      "technology": "React"
+    },
+    {
+      "level": "Master",
+      "technology": "AWS"
+    },
+    {
+      "level": "Master",
+      "technology": "Node.js"
+    },
+    {
+      "level": "Master",
+      "technology": "Astro"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Pragma - BTG Pactual",
+      "description": "Banco de inversión más grande de Latinoamérica.",
+      "highlights": [],
+      "url": "https://www.btgpactual.com.co/es",
+      "technologies": ["Angular", "Ionic", "TypeScript", "AWS"],
+      "isActive": true
+    },
+    {
+      "name": "sanss.co",
+      "description": "Mi página personal y mi curriculum, hecho en Astro.",
+      "highlights": [],
+      "url": "https://bitacora.pragma.com.co",
+      "technologies": ["Astro", "TypeScript"],
+      "isActive": true
+    },
+    {
+      "name": "Pragma - Orbita",
+      "description": "Aplicación interna de la organización, para el manejo y seguimiento de los empleados, para mejorar la capacidad de mejora de habilidades.",
+      "highlights": [],
+      "url": "https://orbita.pragma.com.co",
+      "technologies": ["Angular", "TypeScript"],
+      "isActive": true
+    },
+    {
+      "name": "Pragma - Bitacora",
+      "description": "Aplicación interna principal de la organización, en esta se edita la información personal, el manejo de documentos, administración, y diferentes servicios para pedir ayudar, resolver dudas o pedir vacaciones.",
+      "highlights": [],
+      "url": "https://bitacora.pragma.com.co",
+      "technologies": ["Angular", "TypeScript", "AWS"],
+      "isActive": true
+    },
+    {
+      "name": "SanssTech",
+      "description": "SaaS Para la administración de condominios",
+      "highlights": [],
+      "url": "https://github.com/Sannso/SanssTech",
+      "technologies": ["Angular", "TypeScript", "AWS", "Node.js"],
+      "isActive": false
+    },
+    {
+      "name": "React Projects",
+      "description": "Proyectos de React, aplicaciones y soluciones de pruebas técnicas.",
+      "highlights": [],
+      "url": "https://github.com/Sannso/React-projects",
+      "technologies": ["React", "TypeScript", "Vite"],
+      "isActive": false
+    },
+    {
+      "name": "High-Performance Computing",
+      "description": "Proyectos y ejercicios universitarios de HPC.",
+      "highlights": [],
+      "url": "https://github.com/Sannso/HPC",
+      "technologies": ["C"],
+      "isActive": false
+    },
+    {
+      "name": "Juego en Python tipo zelda",
+      "description": "Juego usando librería de pygames de prueba.",
+      "highlights": [],
+      "url": "https://github.com/Sannso/GameCG2",
+      "technologies": ["Python"],
+      "isActive": false
+    },
+    {
+      "name": "Proyectos Python",
+      "description": "Usos con python, ML, IA, Patrones, Compiladores, entre otras cosas.",
+      "highlights": [],
+      "url": "https://github.com/Sannso/Cosas-de-python",
+      "technologies": ["Python"],
+      "isActive": false
+    }
+  ]
+}

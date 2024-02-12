@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Education from "@/components/cv/Education.astro";
+import About from "@/components/cv/About.astro";
+import Experience from "@/components/cv/Experience.astro";
+import Hero from "@/components/cv/Hero.astro";
+import Projects from "@/components/cv/Projects.astro";
+import Skills from "@/components/cv/Skills.astro";
+---
+
+<Layout title="Sanss">
+  <main class="flex flex-col md:mx-auto md:p-16 p-5 px-8 lg:pb-16 max-w-4xl">
+    <Hero/>
+    <About/>
+    <Experience/>
+    <Education/>
+    <Skills/>
+    <Projects/>
+  </main>
+</Layout>
+
+<style>
+  body {
+    background-image: none !important;
+    background: #fff;
+    letter-spacing: -0.01rem;
+  }
+</style>

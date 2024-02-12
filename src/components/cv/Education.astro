@@ -1,0 +1,26 @@
+---
+import { education } from "@cv";
+import EducationCard from "@/components/cv/EducationCard.astro";
+---
+
+<section class="flex flex-col mt-10 gap-4">
+  <h1 class="text-xl font-bold">Educación</h1>
+  <article class="flex flex-col gap-3">
+    {
+      education &&
+      education.map((value) => {
+          return (
+            <EducationCard
+              institution={value.institution}
+              area={value.area}
+              url={value.url}
+              studyType={value.studyType}
+              startDate={value.startDate}
+              endDate={value.endDate}
+              courses={value.courses}
+            />
+          );
+        })
+    }
+  </article>
+</section>
