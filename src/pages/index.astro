@@ -38,7 +38,7 @@ import "@/styles/styles.scss";
                   <summary class="hover:bg-white hover:bg-opacity-30"
                     ><strong>BTG Pactual</strong> <ChevronsTree />
                   </summary>
-                  <ul class="text-sm mb-2 text-pretty">
+                  <ul class="summary-ul-p text-sm mb-2 text-pretty">
                     <li>
                       Desarrollador Front de App Movil BTG con <strong
                         >Angular y Ionic.</strong
@@ -63,7 +63,7 @@ import "@/styles/styles.scss";
                   <summary class="hover:bg-white hover:bg-opacity-30"
                     ><strong>Pragma Orbita</strong> <ChevronsTree /></summary
                   >
-                  <ul class="text-sm mb-2 text-pretty">
+                  <ul class="summary-ul-p text-sm mb-2 text-pretty">
                     <li>Desarrrollador Front con <strong>Angular</strong></li>
                   </ul>
                 </details>
@@ -74,7 +74,7 @@ import "@/styles/styles.scss";
                   <summary class="hover:bg-white hover:bg-opacity-30"
                     ><strong>Pragma Bitacora</strong> <ChevronsTree /></summary
                   >
-                  <ul class="text-sm mb-2 text-pretty">
+                  <ul class="summary-ul-p text-sm mb-2 text-pretty">
                     <li>Desarrrollador Front con <strong>Angular</strong></li>
                   </ul>
                 </details>
@@ -86,8 +86,9 @@ import "@/styles/styles.scss";
         <li class="tree-first">
           <details>
             <summary class="last-summary hover:bg-white hover:bg-opacity-30"
-              ><strong>UTP</strong> <ChevronsTree /></summary>
-            <ul>
+              ><strong>UTP</strong> <ChevronsTree /></summary
+            >
+            <ul class="summary-ul-p text-sm mb-2 text-pretty">
               <li>Desarrrollador Front con <strong>Laravel</strong></li>
               <li class="pb-2">
                 Desarrollador Back con <strong>Python</strong>
@@ -179,6 +180,10 @@ import "@/styles/styles.scss";
     ul {
       margin-left: calc(var(--radius) - var(--spacing));
       padding-left: 0;
+
+      &.summary-ul-p {
+        padding-right: 28px;
+      }
     }
 
     li::after,

@@ -2,7 +2,7 @@
   "basics": {
     "name": "Santiago Sosa",
     "label": "Ingeniero en Sistemas y Ciencias de la Computación",
-    "image": "",
+    "image": "https://archivos-sanss.s3.amazonaws.com/imgs/pcv.webp",
     "email": "santiago.sosa1@utp.edu.co",
     "phone": "(57) 3046583960",
     "phonewp": "https://wa.me/573046583960",
@@ -63,7 +63,7 @@
       "url": "https://monitores-crie.utp.edu.co/",
       "startDate": "2020",
       "endDate": "2023",
-      "summary": "Hice servicio de atención de estudiantes y profesores en salas de , lo que me ayudo mejorar el trato con otras personas de una forma más profesional.",
+      "summary": "Hice servicio de atención de estudiantes y profesores en salas de computación, lo que me ayudo mejorar el trato con otras personas de una forma más profesional.",
       "technologies": "",
       "remote": false,
       "highlights": []
@@ -185,7 +185,7 @@
       "name": "sanss.co",
       "description": "Mi página personal y mi curriculum, hecho en Astro.",
       "highlights": [],
-      "url": "https://bitacora.pragma.com.co",
+      "url": "https://sanss.co",
       "technologies": ["Astro", "TypeScript"],
       "isActive": true
     },
