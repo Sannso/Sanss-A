@@ -3,17 +3,33 @@ import { basics } from "@cv";
 import WorldMapIcon from "@/icons/WorldMapIcon.astro";
 import SocialSimple from "@/components/cv/SocialSimple.astro";
 
-const { name, label, location, email, phonewp, profiles, image } = basics;
+const { name, fullName, label, location, email, phonewp, profiles, image } =
+  basics;
 ---
 
 <section class="flex justify-between items-center w-full gap-10 lg:gap-16">
   <article>
     <header class="flex flex-col gap-2">
-      <h1 class="font-bold text-[29px] sm:text-3xl">{name}</h1>
-      <p class="font-prime font-light text-gray-500 text-xs sm:text-sm">{label}</p>
+      <h1
+        class="short-name font-bold maxSmall:text-[25px] text-[29px] md:text-3xl"
+      >
+        {name}
+      </h1>
+      <h1
+        class="full-name font-bold maxSmall:text-[25px] text-[29px] md:text-3xl"
+      >
+        {fullName}
+      </h1>
+      <p
+        class="font-prime font-light text-gray-500 text-xs md:text-sm text-balance"
+      >
+        {label}
+      </p>
     </header>
     <main class="mt-2 sm:mt-1">
-      <p class="font-prime text-gray-500 text-xs">
+      <p
+        class="font-prime text-gray-500 maxSmall:text-[10px] maxSmall:leading-4 text-xs"
+      >
         <a
           class="inline-flex gap-x-1.5 align-baseline hover:underline"
           href={`https://www.google.com/maps/place/${location.city},+${location.region}`}
@@ -25,20 +41,41 @@ const { name, label, location, email, phonewp, profiles, image } = basics;
       </p>
     </main>
     <footer class="flex gap-1.5">
-        {
-            email && <SocialSimple social={"Email"} size={18} url={phonewp} />
-        }
-        {
-            phonewp && <SocialSimple social={"Phone"} size={18} url={phonewp} />
-        }
-        {
-            profiles.map(social =>{
-                return <SocialSimple social={social.network} size={18} url={social.url} />
-            })
-        }
+      {email && <SocialSimple social={"Email"} size={18} url={phonewp} />}
+      {phonewp && <SocialSimple social={"Phone"} size={18} url={phonewp} />}
+      {
+        profiles.map((social) => {
+          return (
+            <SocialSimple social={social.network} size={18} url={social.url} />
+          );
+        })
+      }
     </footer>
   </article>
 
-  <img class="w-24 h-24 sm:w-28 sm:h-28 rounded-lg" src={image} alt={`Foto de ${name}`}>
-  
+  <img
+    class="w-24 h-24 sm:w-28 sm:h-28 rounded-lg"
+    src={image}
+    alt={`Foto de ${name}`}
+  />
 </section>
+
+<style lang="scss">
+  @media only screen and (max-width: 800px) {
+    h1.short-name {
+      display: block;
+    }
+    h1.full-name {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    h1.short-name {
+      display: none;
+    }
+    h1.full-name {
+      display: block;
+    }
+  }
+</style>

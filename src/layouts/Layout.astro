@@ -1,4 +1,6 @@
 ---
+
+
 interface Props {
   title: string;
 }
@@ -7,6 +9,8 @@ const { title } = Astro.props;
 
 import "@fontsource/courier-prime/400-italic.css";
 import "@fontsource/courier-prime";
+import { ViewTransitions } from 'astro:transitions';
+import { IMAGE } from "../constants";
 ---
 
 <!doctype html>
@@ -15,13 +19,14 @@ import "@fontsource/courier-prime";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
+    <link rel="icon" type="image/webp" href="/favicon.webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions/>
   </head>
-  <body>
-    <script src="../scripts/loadBackground.ts"></script>
-    <slot />
+  
+  <body style={{backgroundImage: IMAGE()}}>
+    <slot/>
   </body>
 </html>
 <style is:global>
@@ -54,7 +59,7 @@ import "@fontsource/courier-prime";
   }
 
   body {
-    background: #fff;
+    background: #222;
     letter-spacing: -0.01rem;
   }
 

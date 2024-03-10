@@ -5,26 +5,26 @@ interface Props {
   title: string;
   description: string;
   lenguage: string;
-  gitUrl: string;
+  url: string;
 }
 
-const { title, description, lenguage, gitUrl } = Astro.props;
+const { title, description, lenguage, url } = Astro.props;
 let color;
-let url = "https://github.com/Sannso/";
 
-if (lenguage === "React") {
-  color = "#426ee7";
-} else if (lenguage === "Angular") {
-  color = "#e48c27";
-} else if (lenguage === "Python") {
-  color = "#2ba4f5";
-} else if (lenguage === "C") {
-  color = "#1c1d1d";
+if (lenguage == "React") {
+  color = "bg-[#426ee7]";
+} else if (lenguage == "Angular") {
+  color = "bg-[#e48c27]";
+} else if (lenguage == "Python") {
+  color = "bg-[#2ba4f5]";
+} else if (lenguage == "C") {
+  color = "bg-[#1c1d1d]";
 }
+else{ color = "bg-[#1c1d1d]" }
 ---
 
 <a
-  href={`${url}/${gitUrl}`}
+  href={`${url}`}
   target="_blank"
   class="rounded-lg bg-white bg-opacity-20 p-2 px-3 cursor-pointer hover:bg-white hover:bg-opacity-50"
 >
@@ -32,7 +32,7 @@ if (lenguage === "React") {
   <p class="text-ellipsis line-clamp-1">{description}</p>
   <footer class="flex justify-between items-center gap-1 mt-1">
     <section class="flex items-center gap-1 font-medium">
-      <div class={`w-3 h-3 rounded-full bg-[${color}]`}></div>
+      <div class={`w-3 h-3 rounded-full ${color}`}></div>
       {lenguage}
     </section>
     <ChevronRightIcon size={22} />

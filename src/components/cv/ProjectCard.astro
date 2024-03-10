@@ -19,7 +19,7 @@ const { name, description, url, technologies, isActive} = Astro.props;
     <main class="flex flex-col mt-1 gap-1">
         <p class="font-prime text-xs text-gray-500">{description}</p>
         {technologies && 
-        <section>
+        <section class="flex flex-wrap gap-2">
             {
                 technologies.map((tecnology) => {
           return (

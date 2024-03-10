@@ -4,7 +4,10 @@ import Header from "../components/Header.astro";
 import ChevronsTree from "../components/ChevronsTree.astro";
 import FooterSocial from "../components/FooterSocial.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "@cv";
 import "@/styles/styles.scss";
+import { IMAGE } from "../constants";
+
 ---
 
 <Layout title="Sanss">
@@ -104,36 +107,19 @@ import "@/styles/styles.scss";
       <section
         class="flex flex-col w-full p-1 px-10 gap-4 max-h-64 mt-2 lg:max-h-[445px] xl:max-h-[600px] overflow-auto"
       >
-        <ProjectCard
-          gitUrl="SanssTech"
-          title="SanssTech"
-          description="Proyecto SaaS de administracion"
-          lenguage="Angular"
-        />
-        <ProjectCard
-          gitUrl="React-projects"
-          title="React Projects"
-          description="Diferentes proyectos en React, como carritos de compra, entre otros"
-          lenguage="React"
-        />
-        <ProjectCard
-          gitUrl="HPC"
-          title="High-Performance Computing"
-          description="Proyectos y ejercicios universitarios de HPC"
-          lenguage="C"
-        />
-        <ProjectCard
-          gitUrl="GameCG2"
-          title="Juego tipo zelda"
-          description="Juego usando libreria de pygames de prueba"
-          lenguage="Python"
-        />
-        <ProjectCard
-          gitUrl="Cosas-de-python"
-          title="Proyectos Python"
-          description="Usos con python, ML, IA, Patrones, Compiladores, entre otras cosas."
-          lenguage="Python"
-        />
+        {
+          projects &&
+            projects.map((project) => {
+              return (
+                <ProjectCard
+                  url={project.url}
+                  title={project.name}
+                  description={project.description}
+                  lenguage={project.technologies[0]}
+                />
+              );
+            })
+        }
       </section>
     </section>
 
@@ -150,17 +136,38 @@ import "@/styles/styles.scss";
     background-position: center;
     background-size: 100% auto;
 
-    @media screen and (max-width: 1670px) {
-      background-size: auto 100vh;
-    }
-
     @media screen and (max-width: 500px) {
       background-position: center right;
     }
 
-    @media screen and (min-width: 1300px) and (max-height: 800px) {
+    @media screen and (max-width: 1670px) {
+      background-size: auto 100vh;
+
+      @media screen and (max-height: 810px) {
+        background-size: 100% auto;
+      }
+    }
+
+    @media screen and (min-width: 1670px) and (min-height: 1000px) {
+      background-size: auto 100vh;
+    }
+
+    @media screen and (min-width: 1800px) and (min-height: 1000px) {
       background-size: 100% auto;
     }
+
+    
+
+    /*
+    @media screen and (min-width: 1050px) and (max-height: 800px) {
+      background-size: 100% auto;
+    }
+
+    @media screen and (min-width: 1420px) and (max-width: 1680px) and (min-height: 800px) {
+      background-size: 100% auto;
+    }*/
+
+    
   }
 
   .tree {

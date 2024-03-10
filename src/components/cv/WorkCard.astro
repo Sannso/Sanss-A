@@ -15,10 +15,10 @@ const { name, position, url, summary, startDate, endDate, technologies, remote} 
 
 <article>
     <header class="flex justify-between w-full">
-        <section class=" inline-flex align-baseline gap-2">
+        <section class="flex items-center gap-2">
             <a href={url} target="_blank" class="text-md font-medium hover:underline">{name}</a>
             {remote && 
-                <div class="flex pt-1 px-1 items-center bg-gray-100 font-bold font-mono text-xs">Remoto</div>
+                <div class="flex h-5 px-1 items-center rounded-lg bg-gray-100 font-bold font-mono text-xs">Remoto</div>
             }
         </section>
         <section class="text-gray-400">{startDate} - {endDate}</section>
