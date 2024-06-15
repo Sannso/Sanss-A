@@ -6,6 +6,5 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), compress()],
-  output: 'hybrid'
+  integrations: [tailwind(), react(), compress()]
 });
