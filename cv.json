@@ -175,19 +175,51 @@
   ],
   "projects": [
     {
+      "name": "gab",
+      "description": "Saas para el manejo y gestion de ventas simple, con informes impulsados con IA",
+      "highlights": [],
+      "url": "https://github.com/Sannso/gab",
+      "technologies": ["Astro", "TypeScript", "Tailwind"],
+      "isActive": true
+    },
+    {
+      "name": "petsweb",
+      "description": "Pagina web de historial medico para mascotas.",
+      "highlights": [],
+      "url": "https://github.com/Sannso/petsweb",
+      "technologies": ["Astro", "TypeScript", "Tailwind"],
+      "isActive": true
+    },
+    {
+      "name": "bibliovet",
+      "description": "Biblioteca de medicina Veterinaria.",
+      "highlights": [],
+      "url": "https://github.com/Sannso/bibliovet",
+      "technologies": ["Astro", "TypeScript", "Tailwind", "React"],
+      "isActive": true
+    },
+    {
+      "name": "pereiratechtalks.com",
+      "description": "Colaboracion en el proyecto de pereira-tec-talks.",
+      "highlights": [],
+      "url": "https://github.com/pereira-tech-talks/pereiratechtalks.com",
+      "technologies": ["Astro", "TypeScript"],
+      "isActive": true
+    },
+    {
+      "name": "fakeweb",
+      "description": "Aplicacion de ejemplos de animaciones.",
+      "highlights": [],
+      "url": "https://github.com/Sannso/fakeweb",
+      "technologies": ["Astro", "TypeScript"],
+      "isActive": true
+    },
+    {
       "name": "Pragma - BTG Pactual",
       "description": "Banco de inversión más grande de Latinoamérica.",
       "highlights": [],
       "url": "https://www.btgpactual.com.co/es",
       "technologies": ["Angular", "Ionic", "TypeScript", "AWS"],
-      "isActive": true
-    },
-    {
-      "name": "sanss.co",
-      "description": "Mi página personal y mi curriculum, hecho en Astro.",
-      "highlights": [],
-      "url": "https://sanss.co",
-      "technologies": ["Astro", "TypeScript"],
       "isActive": true
     },
     {
