@@ -178,7 +178,7 @@
       "name": "gab",
       "description": "Saas para el manejo y gestion de ventas simple, con informes impulsados con IA",
       "highlights": [],
-      "url": "https://github.com/Sannso/gab",
+      "url": "https://mygab.vercel.app",
       "technologies": ["Astro", "TypeScript", "Tailwind"],
       "isActive": true
     },
@@ -186,7 +186,7 @@
       "name": "petsweb",
       "description": "Pagina web de historial medico para mascotas.",
       "highlights": [],
-      "url": "https://github.com/Sannso/petsweb",
+      "url": "https://qpets.vercel.app",
       "technologies": ["Astro", "TypeScript", "Tailwind"],
       "isActive": true
     },
@@ -194,7 +194,7 @@
       "name": "bibliovet",
       "description": "Biblioteca de medicina Veterinaria.",
       "highlights": [],
-      "url": "https://github.com/Sannso/bibliovet",
+      "url": "https://bibliovet.vercel.app",
       "technologies": ["Astro", "TypeScript", "Tailwind", "React"],
       "isActive": true
     },
@@ -202,7 +202,7 @@
       "name": "pereiratechtalks.com",
       "description": "Colaboracion en el proyecto de pereira-tec-talks.",
       "highlights": [],
-      "url": "https://github.com/pereira-tech-talks/pereiratechtalks.com",
+      "url": "https://www.pereiratechtalks.com",
       "technologies": ["Astro", "TypeScript"],
       "isActive": true
     },
@@ -210,7 +210,7 @@
       "name": "fakeweb",
       "description": "Aplicacion de ejemplos de animaciones.",
       "highlights": [],
-      "url": "https://github.com/Sannso/fakeweb",
+      "url": "https://fakeweb1.netlify.app",
       "technologies": ["Astro", "TypeScript"],
       "isActive": true
     },
